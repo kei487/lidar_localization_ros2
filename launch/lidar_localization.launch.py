@@ -31,7 +31,7 @@ def generate_launch_description():
         name='odom_tf',
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0','0','0','0','0','0','1','odom','base_link']
+        arguments=['0','0','0','0','0','0','1','map','odom']
         )
 
     localization_param_dir = launch.substitutions.LaunchConfiguration(
