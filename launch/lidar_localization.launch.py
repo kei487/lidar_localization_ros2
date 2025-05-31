@@ -20,12 +20,12 @@ def generate_launch_description():
 
     ld = launch.LaunchDescription()
 
-    lidar_tf = launch_ros.actions.Node(
-        name='lidar_tf',
-        package='tf2_ros',
-        executable='static_transform_publisher',
-	arguments=['0.2', '0.15', '0', '0', '0.390731', '0', '0.920505','base_link','lidar_link']
-        )
+#    lidar_tf = launch_ros.actions.Node(
+#        name='lidar_tf',
+#        package='tf2_ros',
+#        executable='static_transform_publisher',
+#	arguments=['0.2', '0.15', '0', '0', '0.390731', '0', '0.920505','base_link','lidar_link']
+#        )
 
     odom_tf = launch_ros.actions.Node(
         name='odom_tf',
@@ -90,7 +90,7 @@ def generate_launch_description():
     ld.add_action(from_inactive_to_active)
 
     ld.add_action(lidar_localization)
-    ld.add_action(lidar_tf)
+    #ld.add_action(lidar_tf)
     ld.add_action(odom_tf)
     ld.add_action(to_inactive)
 
