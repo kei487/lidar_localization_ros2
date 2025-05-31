@@ -24,7 +24,7 @@ def generate_launch_description():
         name='lidar_tf',
         package='tf2_ros',
         executable='static_transform_publisher',
-	arguments=['0','0','0','0','0','0','1','base_link','lidar_link']
+	arguments=['0.2', '0.15', '0', '0', '0.390731', '0', '0.920505','base_link','lidar_link']
         )
 
     odom_tf = launch_ros.actions.Node(
